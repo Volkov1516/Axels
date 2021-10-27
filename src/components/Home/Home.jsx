@@ -1,27 +1,49 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 
-const Home = () => {
+const Home = ({ products }) => {
+  const ProductCard = styled(Card)`
+    margin: 10px;
+  `;
+
+  const ProductImg = styled(Card.Img)`
+    height: 200px;
+    width: 100%;
+  `;
+
+  const ProductTitle = styled(Card.Title)`
+    padding: 4px;
+    margin: 0 auto;
+  `;
+
+  const ProductDescription = styled(Card.Text)`
+    padding: 4px;
+  `;
+
   return (
     <Container>
       <Row>
-        <Col xs="3">
-          <Card>
-            <Card.Img
-              style={{ height: "200px", width: "100%" }}
-              variant="top"
-              src="https://static.toiimg.com/photo/77120379.cms"
-            />
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
-          </Card>
-        </Col>
+        {products &&
+          products.map((product, index) => (
+            <Col key={index} lg="3" md="4" sm="6">
+              <ProductCard>
+                <ProductImg src={product.img} alt="product img" variant="top" />
+                <ProductTitle> {product.title} </ProductTitle>
+                <ProductDescription>
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </ProductDescription>
+                <Link
+                  to={`/product/${product.id}`}
+                  style={{ padding: "4px", margin: "0 auto" }}
+                >
+                  <Button variant="primary">Details</Button>
+                </Link>
+              </ProductCard>
+            </Col>
+          ))}
       </Row>
     </Container>
   );

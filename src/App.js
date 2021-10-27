@@ -5,40 +5,47 @@ import './App.css';
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import Product from './components/Product/Product';
 
 function App() {
-  // const [isAuth, setIsAuth] = useState(true)
-  // if(!isAuth) {
-  //   return <Login setIsAuth={setIsAuth} />
-  // }
-  const [data, setData] = useState([])
+
+  const [isAuth, setIsAuth] = useState(false)
+  const [products, setProducts] = useState([])
+  const [reviews, setReviws] = useState([])
 
   useEffect(() => {
-    axios.get('https://demo4176211.mockable.io/a').then((resp) => setData(resp.data))
+    axios.get('https://demo4176211.mockable.io/data')
+    .then((resp) => {
+      setProducts(resp.data.products)
+      setReviws(resp.data.reviews)
+    })
   }, [])
 
-  console.log(data)
-
-  const addData = () => {
-    axios.post('https://demo4176211.mockable.io/a', {
-      id: 2,
-      text: "Another Text"
-    }).then((resp) => setData([...data, resp.data]))
+  const addReview = (productId, text) => {
+    const newReview= {
+      "id": 1,
+      productId,
+      "userId": 1,
+      "userName": "User Name",
+      text,
+      "rate": 4
   }
-
-  console.log(data)
+  setReviws([newReview, ...reviews])
+  }
 
   return (
     <Router>
         <Header />
-        <button onClick={addData} >Add</button>
         <Switch>
           <Route path="/" exact >
-            <Home />
+            <Home products={products} />
           </Route>
           <Route path="/login" >
-            <Login />
+            <Login isAuth={isAuth} setIsAuth={setIsAuth} />
           </Route>
+          {products && products.map((product, index) => <Route key={index} path={`/product/${product.id}`} >
+            <Product product={product} reviews={reviews} addReview={addReview} isAuth={isAuth} />
+          </Route>)}
         </Switch>
     </Router>
   );

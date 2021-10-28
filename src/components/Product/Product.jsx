@@ -1,53 +1,25 @@
-import React, { useState } from 'react'
-import { Button, Container } from "react-bootstrap";
-import styled from "styled-components";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Container, Form } from "react-bootstrap";
+import {
+  ProductCard,
+  ProductImg,
+  ProductInfo,
+  ProductDescription,
+  InputSectionLogin,
+  InputSectionLoginText,
+  InputSection,
+  ReviewInput,
+  ReviewButton,
+  CommentsSection,
+} from "./styledProduct.js";
 import Comments from "./Comments/Comments";
 
 const Product = ({ product, reviews, addReview, isAuth }) => {
-  const ProductCard = styled.div`
-    width: 100%;
-    height: 100%;
-    margin: 20px 0px 20px 0px;
-    padding: 10px 40px 10px 40px;
-    border: 1px solid gray;
-    display: flex;
-  `;
+  const [reviewText, setReviewText] = useState("");
 
-  const ProductImg = styled.img`
-    width: 400px;
-    height: 400px;
-  `;
-
-  const ProductInfo = styled.div`
-    width: 100%;
-    margin-left: 10px;
-  `;
-
-  const InputSection = styled.div`
-    width: 802px;
-    margin: 0 auto;
-  `;
-
-  const ReviewInput = styled.input`
-    width: 700px;
-    height: 60px;
-    padding-left: 10px;
-  `;
-
-  const ReviewButton = styled(Button)`
-    width: 100px;
-    height: 60px;
-    margin-bottom: 5px;
-  `;
-
-  const CommentsSection = styled.div`
-    width: 100%;
-    height: 100%;
-    margin: 20px 0px 20px 0px;
-    padding: 10px 40px 10px 40px;
-  `;
-
-  const [reviewText, setReviewText] = useState('')
+  const [reviewRate, setReviewRate] = useState("");
 
   return (
     <Container>
@@ -55,31 +27,42 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
         <ProductImg src={product.img} alt="product img" />
         <ProductInfo>
           <h3>{product.title}</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            nihil harum quae eum obcaecati dolores non molestiae laborum
-            mollitia? Nemo necessitatibus atque deleniti repellat aspernatur
-            laboriosam id autem minima aperiam?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
-            nihil harum quae eum obcaecati dolores non molestiae laborum
-            mollitia? Nemo necessitatibus atque deleniti repellat aspernatur
-            laboriosam id autem minima aperiam?
-          </p>
+          <ProductDescription>{product.descriptionFull}</ProductDescription>
         </ProductInfo>
       </ProductCard>
 
-      {isAuth && <InputSection>
-        <ReviewInput placeholder="Type your review" value={reviewText} onChange={e => setReviewText(e.target.value)} />
-        <ReviewButton onClick={() => addReview(product.id, reviewText)} >Post</ReviewButton>
-      </InputSection>}
+      {isAuth ? (
+        <InputSection>
+          <ReviewInput
+            placeholder="Type your review"
+            value={reviewText}
+            onChange={(e) => setReviewText(e.target.value)}
+          />
+          <Form.Select value={reviewRate} onChange={e => setReviewRate(e.target.value)} style={{width: '60px', marginBottom: '5px'}}>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </Form.Select>
+          <ReviewButton onClick={() => addReview(product.id, reviewText, reviewRate)}>
+            Post
+          </ReviewButton>
+        </InputSection>
+      ) : (
+        <InputSectionLogin>
+          <InputSectionLoginText>
+            Please, <Link to="/login"> <Button variant="outline-danger" size="sm">Login</Button></Link> to leave a comment!
+          </InputSectionLoginText>
+        </InputSectionLogin>
+      )}
 
       <CommentsSection>
-        {reviews && reviews.map((review, index) => {
-          if (review.productId === product.id)
-            return <Comments key={index} review={review} />;
-        })}
+        {reviews &&
+          reviews.map((review, index) => {
+            if (review.productId === product.id)
+              return <Comments key={index} review={review} />;
+          })}
       </CommentsSection>
     </Container>
   );

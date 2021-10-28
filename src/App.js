@@ -8,7 +8,6 @@ import Login from './components/Login/Login';
 import Product from './components/Product/Product';
 
 function App() {
-
   const [isAuth, setIsAuth] = useState(false)
   const [products, setProducts] = useState([])
   const [reviews, setReviws] = useState([])
@@ -21,21 +20,21 @@ function App() {
     })
   }, [])
 
-  const addReview = (productId, text) => {
+  const addReview = (productId, text, rate) => {
     const newReview= {
       "id": 1,
       productId,
-      "userId": 1,
-      "userName": "User Name",
+      "userId": isAuth.id,
+      "userName": isAuth.email,
       text,
-      "rate": 4
-  }
-  setReviws([newReview, ...reviews])
+      "rate": rate
+    }
+    setReviws([newReview, ...reviews])
   }
 
   return (
     <Router>
-        <Header />
+        <Header isAuth={isAuth} setIsAuth={setIsAuth} />
         <Switch>
           <Route path="/" exact >
             <Home products={products} />

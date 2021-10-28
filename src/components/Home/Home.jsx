@@ -1,27 +1,9 @@
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Card, Button, Container, Row, Col } from "react-bootstrap";
-import styled from "styled-components";
+import { Button, Container, Row, Col } from "react-bootstrap";
+import { ProductCard, ProductImg, ProductTitle, ProductDescription } from './styledHome.js'
 
 const Home = ({ products }) => {
-  const ProductCard = styled(Card)`
-    margin: 10px;
-  `;
-
-  const ProductImg = styled(Card.Img)`
-    height: 200px;
-    width: 100%;
-  `;
-
-  const ProductTitle = styled(Card.Title)`
-    padding: 4px;
-    margin: 0 auto;
-  `;
-
-  const ProductDescription = styled(Card.Text)`
-    padding: 4px;
-  `;
-
   return (
     <Container>
       <Row>
@@ -32,8 +14,7 @@ const Home = ({ products }) => {
                 <ProductImg src={product.img} alt="product img" variant="top" />
                 <ProductTitle> {product.title} </ProductTitle>
                 <ProductDescription>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
+                  {product.description}
                 </ProductDescription>
                 <Link
                   to={`/product/${product.id}`}

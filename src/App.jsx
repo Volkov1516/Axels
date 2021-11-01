@@ -1,29 +1,26 @@
-import React, {useState, useEffect} from "react"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import axios from "axios"
+import React, {useState, useEffect} from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import axios from 'axios'
 import { Header, Home, Product, Login } from './components/index'
 
-function App() {
+const App = () => {
   const [isAuth, setIsAuth] = useState(false)
   const [products, setProducts] = useState([])
   const [reviews, setReviws] = useState([])
 
-  useEffect(() => {
-    axios.get("https://demo4176211.mockable.io/data")
-    .then((resp) => {
-      setProducts(resp.data.products)
-      setReviws(resp.data.reviews)
-    })
-  }, [])
+  useEffect(() => axios.get('https://demo4176211.mockable.io/data').then((resp) => {
+    setProducts(resp.data.products)
+    setReviws(resp.data.reviews)
+  }), [])
 
   const addReview = (productId, text, rate) => {
     const newReview= {
-      "id": 1,
+      'id': 1,
       productId,
-      "userId": isAuth.id,
-      "userName": isAuth.email,
+      'userId': isAuth.id,
+      'userName': isAuth.email,
       text,
-      "rate": rate
+      'rate': rate
     }
     setReviws([newReview, ...reviews])
   }

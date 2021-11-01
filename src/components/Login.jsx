@@ -1,7 +1,7 @@
-import React, {useState} from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import { Container, Form } from "react-bootstrap"
-import { FormWrapper, SubmitButton }  from "../styled/Login"
+import React, {useState} from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Container, Form } from 'react-bootstrap'
+import { FormWrapper, SubmitButton }  from '../styled/Login'
 
 const Login = ({ setIsAuth }) => {
   const [inputEmailValue, setInputEmailValue] = useState('')
@@ -11,7 +11,7 @@ const Login = ({ setIsAuth }) => {
     setIsAuth({
       id: 1,
       email: inputEmailValue,
-      password: "123"
+      password: '123'
     })
   }
 

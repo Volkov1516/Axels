@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
-  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection } from "../../styled/Product/Product.js";
-import Comments from "./Comments";
+  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection } from '../../styled/Product/Product.js'
+import Comments from './Comments'
 
 const Product = ({ product, reviews, addReview, isAuth }) => {
-  const [reviewText, setReviewText] = useState("");
-  const [reviewRate, setReviewRate] = useState("");
+  const [reviewText, setReviewText] = useState('');
+  const [reviewRate, setReviewRate] = useState('');
 
   return (
     <Container>
@@ -61,4 +61,4 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
   );
 };
 
-export default Product;
+export default Product

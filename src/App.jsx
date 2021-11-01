@@ -1,11 +1,7 @@
-import React, {useState, useEffect} from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import axios from 'axios'
-import './App.css';
-import Header from './components/Header/Header';
-import Home from './components/Home/Home';
-import Login from './components/Login/Login';
-import Product from './components/Product/Product';
+import React, {useState, useEffect} from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import axios from "axios"
+import { Header, Home, Product, Login } from './components/index'
 
 function App() {
   const [isAuth, setIsAuth] = useState(false)
@@ -13,7 +9,7 @@ function App() {
   const [reviews, setReviws] = useState([])
 
   useEffect(() => {
-    axios.get('https://demo4176211.mockable.io/data')
+    axios.get("https://demo4176211.mockable.io/data")
     .then((resp) => {
       setProducts(resp.data.products)
       setReviws(resp.data.reviews)

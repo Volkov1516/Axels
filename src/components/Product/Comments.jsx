@@ -1,4 +1,4 @@
-import { CommentContainer, UserInfo } from './styledComments.js'
+import { CommentContainer, UserInfo } from "../../styled/Product/Comments.js"
 
 const Comments = ({ review }) => {
   return (

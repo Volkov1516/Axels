@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Form } from "react-bootstrap";
-import { FormWrapper, SubmitButton }  from './styledLogin'
+import React, {useState} from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import { Container, Form } from "react-bootstrap"
+import { FormWrapper, SubmitButton }  from "../styled/Login"
 
-const Login = ({ isAuth, setIsAuth }) => {
-
+const Login = ({ setIsAuth }) => {
   const [inputEmailValue, setInputEmailValue] = useState('')
 
   const handleSubmit = (event) => {

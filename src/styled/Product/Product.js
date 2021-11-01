@@ -1,34 +1,29 @@
-import styled from "styled-components";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button } from "react-bootstrap";
+import styled from 'styled-components'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Button } from 'react-bootstrap'
+import { SHADOWS, COLORS } from '../constants';
 
 export const ProductCard = styled.div`
-    width: 100%;
-    height: 100%;
     margin: 20px 0px 20px 0px;
-    padding: 10px 40px 10px 40px;
+    padding: 10px 10px 10px 10px;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
-    box-shadow: 0 20px 35px #E5E5E5;
+    box-shadow: ${SHADOWS.common};
     display: flex;
   `;
 
 export const ProductImg = styled.img`
-    width: 400px;
-    height: 400px;
+    width: 300px;
   `;
 
-export const ProductInfo = styled.div`
-    width: 100%;
-    margin-left: 10px;
-  `;
+export const ProductInfo = styled.div``;
 
 export const ProductDescription = styled.p`
-  color: gray;
+  color: ${COLORS.gray};
 `;
 
 export const InputSectionLogin = styled.div`
-  width: 400px;
+  width: 300px;
   margin: 0 auto;
   margin-top: 40px;
   text-align: center;

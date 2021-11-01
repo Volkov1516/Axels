@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Button } from "react-bootstrap";
-import { UserName } from './styledHeader.js'
+import { UserName } from "../styled/Header.js"
 
 const Header = ({ isAuth, setIsAuth }) => {
-  const handleLogout = () => {
-    setIsAuth(false)
-  }
-
+  const handleLogout = () => setIsAuth(false)
+  
   return (
     <Navbar expand="lg" bg="primary">
       <Container>

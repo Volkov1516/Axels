@@ -1,10 +1,12 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { Button, Col, Container, Form, Row } from 'react-bootstrap'
-import { ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
-  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection } from '../../styled/Product/Product.js'
-import Comments from './Comments'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Col, Container, Row } from 'react-bootstrap';
+import { 
+  ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
+  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, ReviewSelect 
+} from '../../styled/Product/Product.js';
+import Comments from './Comments';
 
 const Product = ({ product, reviews, addReview, isAuth }) => {
   const [reviewText, setReviewText] = useState('');
@@ -25,7 +27,6 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
         </Col>
         </Row>
       </ProductCard>
-
       {isAuth ? (
         <Row>
         <InputSection>
@@ -34,13 +35,13 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
           />
-          <Form.Select value={reviewRate} onChange={e => setReviewRate(e.target.value)} style={{width: '60px', marginBottom: '5px'}}>
+          <ReviewSelect value={reviewRate} onChange={e => setReviewRate(e.target.value)} >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
-          </Form.Select>
+          </ReviewSelect>
           <ReviewButton onClick={() => addReview(product.id, reviewText, reviewRate)}>
             Post
           </ReviewButton>
@@ -53,7 +54,6 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
           </InputSectionLoginText>
         </InputSectionLogin>
       )}
-
       <CommentsSection>
         {reviews && reviews.map((review, index) => (review.productId === product.id) && <Comments key={index} review={review} />)}
       </CommentsSection>
@@ -61,4 +61,4 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
   );
 };
 
-export default Product
+export default Product;

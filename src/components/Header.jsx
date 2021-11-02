@@ -1,5 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Navbar, Container, Button } from 'react-bootstrap';
+
 import { UserName, NavbarBrand, BrandLink } from '../styled/Header.js';
 
 const Header = ({ isAuth, setIsAuth }) => (

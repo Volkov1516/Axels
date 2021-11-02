@@ -1,7 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Button, Container, Row, Col } from 'react-bootstrap';
-import { ProductCard, ProductImg, ProductTitle, ProductDescription, 
-  ProductImgWrapper, ProductLink
+
+import { 
+  ProductCard, ProductImg, ProductTitle, ProductDescription, ProductImgWrapper, 
+  ProductLink
 } from '../styled/Home.js';
 
 const Home = ({ products }) => (

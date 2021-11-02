@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Container, Form } from 'react-bootstrap';
+
 import { FormWrapper, SubmitButton }  from '../styled/Login';
 
 const Login = ({ setIsAuth }) => {
@@ -21,7 +23,10 @@ const Login = ({ setIsAuth }) => {
       <Form onSubmit={handleSubmit}>
         <Form.Group>
           <Form.Label>Email:</Form.Label>
-          <Form.Control required type="text" placeholder="Enter your email" value={inputEmailValue} onChange={e => setInputEmailValue(e.target.value)} />
+          <Form.Control 
+            required type="text" placeholder="Enter your email" 
+            value={inputEmailValue} onChange={event => setInputEmailValue(event.target.value)} 
+          />
         </Form.Group>
         <Form.Group>
           <Form.Label>Password:</Form.Label>

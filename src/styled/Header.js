@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { COLORS } from './constants';
 
 export const UserName = styled.span`

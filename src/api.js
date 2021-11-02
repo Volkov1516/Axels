@@ -1,11 +1,10 @@
 import axios from 'axios';
 
-export let appData = [];
+const DATA_URL = 'https://demo4176211.mockable.io/data';
 
-async function getData() {
-  const request = await axios.get('https://demo4176211.mockable.io/data')
-  return appData = request.data 
+export async function getData() {
+  const request = await axios.get(DATA_URL)
+  return request.data 
 }
 
-getData();
 

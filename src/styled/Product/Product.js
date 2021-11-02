@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Button, Form } from 'react-bootstrap';
+
 import { SHADOWS, COLORS } from '../constants';
 
 export const ProductCard = styled.div`
@@ -47,7 +49,7 @@ export const ReviewInput = styled.input`
 
 export const ReviewSelect = styled(Form.Select)`
   width: 60px; 
-  marginBottom: 5px;
+  margin-bottom: 5px;
 `;
 
 export const ReviewButton = styled(Button)`

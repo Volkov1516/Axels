@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import { Card } from 'react-bootstrap';
+
 import { SHADOWS, COLORS } from './constants';
 
 export const ProductCard = styled(Card)`

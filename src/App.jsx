@@ -1,17 +1,21 @@
 import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 import { Header, Home, Product, Login } from './components/index';
-import { appData } from './api';
+
+import { getData } from './api';
 
 const App = () => {
   const [isAuth, setIsAuth] = useState(false)
   const [products, setProducts] = useState([])
-  const [reviews, setReviws] = useState([])
+  const [reviews, setReviws] = useState([]) 
 
   useEffect(() => {
-    setProducts(appData.products)
-    setReviws(appData.reviews)
-  }, [products, reviews])
+    getData().then(resp => {
+      setProducts(resp.products)
+      setReviws(resp.reviews)
+    })
+  }, [])
 
   const addReview = (productId, text, rate) => {
     const newReview= {

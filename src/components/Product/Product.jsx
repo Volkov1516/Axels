@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { Button, Col, Container, Row } from 'react-bootstrap';
+import Comments from './Comments';
+
 import { 
   ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
-  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, ReviewSelect 
+  InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, 
+  ReviewSelect 
 } from '../../styled/Product/Product.js';
-import Comments from './Comments';
 
 const Product = ({ product, reviews, addReview, isAuth }) => {
   const [reviewText, setReviewText] = useState('');
@@ -35,7 +38,7 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
             value={reviewText}
             onChange={(e) => setReviewText(e.target.value)}
           />
-          <ReviewSelect value={reviewRate} onChange={e => setReviewRate(e.target.value)} >
+          <ReviewSelect value={reviewRate} onChange={event => setReviewRate(event.target.value)} >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -50,12 +53,16 @@ const Product = ({ product, reviews, addReview, isAuth }) => {
       ) : (
         <InputSectionLogin>
           <InputSectionLoginText>
-            Please, <Link to="/login"> <Button variant="outline-danger" size="sm">Login</Button></Link> to leave a comment!
+            Please, {" "}
+            <Link to="/login"><Button variant="outline-danger" size="sm"> Login </Button></Link> 
+            {" "} to leave a comment!
           </InputSectionLoginText>
         </InputSectionLogin>
       )}
       <CommentsSection>
-        {reviews && reviews.map((review, index) => (review.productId === product.id) && <Comments key={index} review={review} />)}
+        {reviews && reviews.map(
+          (review, index) => (review.productId === product.id) && <Comments key={index} review={review} />
+        )}
       </CommentsSection>
     </Container>
   );

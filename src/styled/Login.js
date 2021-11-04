@@ -15,3 +15,8 @@ export const SubmitButton = styled(Button)`
   width: 260px;
 `;
 
+export const FormWarning = styled.p`
+  color: red;
+  font-size: 14px;
+`;
+

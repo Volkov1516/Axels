@@ -6,7 +6,7 @@ The testing task app.
 ## Features 
 - React Hooks
 - Global state with Redux Toolkit
-- HTTP requests with axios and JSON server
+- HTTP requests with axios
 - Routing with React Router
 - Formik
 - Bootstrap

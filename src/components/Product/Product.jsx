@@ -17,10 +17,10 @@ const Product = ({ product }) => {
   const [reviewText, setReviewText] = useState('');
   const [reviewRate, setReviewRate] = useState('');
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const { reviews } = useSelector(state => state.review) 
-  const { isAuth } = useSelector(state => state.auth)
+  const { reviews } = useSelector(state => state.review);
+  const { isAuth } = useSelector(state => state.auth);
 
   const addReview = (productId, text, rate) => {
     dispatch(SET_REVIEW({

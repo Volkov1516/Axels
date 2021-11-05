@@ -9,7 +9,7 @@ import {
 } from '../styled/Home.js';
 
 const Home = () => {
-  const { products } = useSelector(state => state.product)
+  const { products } = useSelector(state => state.product);
 
   return (
     <Container>

@@ -5,12 +5,12 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Header, Home, Product, Login } from './components/index';
 
 const App = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const { products } = useSelector(state => state.product)
+  const { products } = useSelector(state => state.product);
 
   useEffect(() => {
-    dispatch({type: 'LOAD_DATA'})
+    dispatch({type: 'LOAD_DATA'});
   }, [dispatch])
 
   return (

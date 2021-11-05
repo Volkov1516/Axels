@@ -10,9 +10,9 @@ import { SET_USER } from '../redux/features/auth/authSlice';
 import { FormWrapper, SubmitButton, FormWarning } from '../styled/Login';
 
 const Login = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const [toggleSign, setToggleSign] = useState(false)
+  const [toggleSign, setToggleSign] = useState(false);
 
   const formik = useFormik({
     initialValues: {

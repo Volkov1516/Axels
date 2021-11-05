@@ -7,12 +7,12 @@ import { SET_USER } from '../redux/features/auth/authSlice.js';
 import { UserName, NavbarBrand, BrandLink } from '../styled/Header.js';
 
 const Header = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const { isAuth } = useSelector(state => state.auth)
+  const { isAuth } = useSelector(state => state.auth);
 
   const handleLogout = () => {
-    dispatch(SET_USER(false))
+    dispatch(SET_USER(false));
   }
 
   return (

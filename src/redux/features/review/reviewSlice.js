@@ -7,10 +7,10 @@ export const reviewSlice = createSlice({
   },
   reducers: {
     GET_REVIEWS: (state, action) => {
-      state.reviews = action.payload
+      state.reviews = action.payload;
     },
     SET_REVIEW: (state, action) => {
-      state.reviews.unshift(action.payload)
+      state.reviews.unshift(action.payload);
     }
   }
 })

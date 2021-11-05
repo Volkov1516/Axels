@@ -5,17 +5,17 @@ import { GET_REVIEWS } from '../features/review/reviewSlice';
 import { getData } from '../../api';
 
 export function* workerSaga() {
-  const data = yield call(getData)
+  const data = yield call(getData);
 
-  yield put({type: GET_PRODUCTS, payload: data.products})
-  yield put({type: GET_REVIEWS, payload: data.reviews})
+  yield put({type: GET_PRODUCTS, payload: data.products});
+  yield put({type: GET_REVIEWS, payload: data.reviews});
 }
 
 export function* watcherSaga() {
-  yield takeEvery('LOAD_DATA', workerSaga)
+  yield takeEvery('LOAD_DATA', workerSaga);
 }
 
 export default function* rootSaga() {
-  yield watcherSaga()
+  yield watcherSaga();
 }
 

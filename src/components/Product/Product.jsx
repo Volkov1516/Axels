@@ -1,19 +1,38 @@
 import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import Comments from './Comments';
 
+import { SET_REVIEW } from '../../redux/features/review/reviewSlice'
 import { 
   ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
   InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, 
   ReviewSelect 
 } from '../../styled/Product/Product.js';
 
-const Product = ({ product, reviews, addReview, isAuth }) => {
+const Product = ({ product }) => {
   const [reviewText, setReviewText] = useState('');
   const [reviewRate, setReviewRate] = useState('');
+
+  const dispatch = useDispatch();
+
+  const { reviews } = useSelector(state => state.review);
+  const { isAuth } = useSelector(state => state.auth);
+
+  const addReview = (productId, text, rate) => {
+    dispatch(SET_REVIEW({
+      'id': 1,
+      productId,
+      'userId': isAuth.id,
+      'userName': isAuth.email,
+      text,
+      'rate': rate
+    }))
+  }
+
 
   return (
     <Container>

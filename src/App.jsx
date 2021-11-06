@@ -18,7 +18,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route path="/" exact >
-            <Home products={products} />
+            <Home />
           </Route>
           <Route path="/login" >
             <Login />

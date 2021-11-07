@@ -1,6 +1,17 @@
 import { CommentContainer, UserInfo } from '../../styled/Product/Comments.js';
 
-const Comments = ({ review }) => (
+interface IProps {
+    review: {
+        id: number,
+        productId: number,
+        userId: number,
+        userName: string,
+        text: string,
+        rate: string
+    }
+}
+
+const Comments = ({ review }: IProps) => (
   <CommentContainer>
     <UserInfo>
       <p> <b> {review.userName} </b> </p>

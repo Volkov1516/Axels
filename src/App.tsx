@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Header, Home, Product, Login } from './components/index';
 
-const App = () => {
-  const dispatch = useDispatch();
+import { useAppDispatch, useAppSelector } from './redux/hooks';
 
-  const { products } = useSelector(state => state.product);
+const App = () => {
+  const dispatch = useAppDispatch();
+
+  const { products } = useAppSelector(state => state.product);
 
   useEffect(() => {
     dispatch({type: 'LOAD_DATA'});

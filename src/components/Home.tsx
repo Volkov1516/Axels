@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Button, Container, Row, Col } from 'react-bootstrap';
@@ -7,9 +6,10 @@ import {
   ProductCard, ProductImg, ProductTitle, ProductDescription, ProductImgWrapper, 
   ProductLink
 } from '../styled/Home.js';
+import { useAppSelector } from '../redux/hooks';
 
 const Home = () => {
-  const { products } = useSelector(state => state.product);
+  const { products } = useAppSelector(state => state.product);
 
   return (
     <Container>

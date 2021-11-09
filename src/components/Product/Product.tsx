@@ -10,7 +10,7 @@ import {
   ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
   InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, 
   ReviewSelect 
-} from '../../styled/Product/Product.js';
+} from '../../styled/Product/Product';
 import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
 interface IProps {

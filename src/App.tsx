@@ -1,11 +1,12 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Header, Home, Product, Login } from './components/index';
 
 import { useAppDispatch, useAppSelector } from './redux/hooks';
 
-const App = () => {
+const App= () => {
   const dispatch = useAppDispatch();
 
   const { products } = useAppSelector(state => state.product);

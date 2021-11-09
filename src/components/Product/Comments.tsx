@@ -1,4 +1,4 @@
-import { CommentContainer, UserInfo } from '../../styled/Product/Comments.js';
+import { CommentContainer, UserInfo } from '../../styled/Product/Comments';
 
 interface IProps {
     review: {

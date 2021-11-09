@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Container, Button } from 'react-bootstrap';
 
 import { SET_USER } from '../redux/features/auth/authSlice';
-import { UserName, NavbarBrand, BrandLink } from '../styled/Header.js';
+import { UserName, NavbarBrand, BrandLink } from '../styled/Header';
 import { useAppSelector, useAppDispatch } from '../redux/hooks'
 
 const Header = () => {

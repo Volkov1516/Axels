@@ -5,7 +5,7 @@ import { Button, Container, Row, Col } from 'react-bootstrap';
 import { 
   ProductCard, ProductImg, ProductTitle, ProductDescription, ProductImgWrapper, 
   ProductLink
-} from '../styled/Home.js';
+} from '../styled/Home';
 import { useAppSelector } from '../redux/hooks';
 
 const Home = () => {

@@ -1,0 +1,139 @@
+{
+  "users": [
+      {
+          "id": 1,
+          "login": "User Login",
+          "password": "User Password"
+      }
+  ],
+  "products": [
+      {
+          "id": 1,
+          "title": "Apples",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://www.dole.com/-/media/project/dole/produce-images/fruit/apples_cut_web.png?h=540&w=720&rev=d90d9052a81f4790a2cf484fba2505fd&hash=0180255164D0EEE11A816E99EA84CE1F"
+      },
+      {
+          "id": 2,
+          "title": "Pears",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://www.dole.com/-/media/project/dole/produce-images/fruit/pears_cut_web.png?h=540&w=720&rev=10de6975e8374745b30330750d6ffd18&hash=3D9B2223570A91D9684A5E87A287FD9F"
+      },
+      {
+          "id": 3,
+          "title": "Oranges",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://produits.bienmanger.com/36106-0w0h0_Organic_Oranges_From_Greece.jpg"
+      },
+      {
+          "id": 4,
+          "title": "Bananas",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://m.media-amazon.com/images/I/61fZ+YAYGaL._SL1500_.jpg"
+      },
+      {
+          "id": 5,
+          "title": "Cherries",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://static.educalingo.com/img/en/800/cherry.jpg"
+      },
+      {
+          "id": 6,
+          "title": "Plums",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://askthefoodgeek.com/wp-content/uploads/2017/02/plums-in-season.jpg"
+      },
+      {
+          "id": 7,
+          "title": "Raspberries",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://img3.zakaz.ua/23.1577102239.ad72436478c_2019-12-23_Svetlana/23.1577102239.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.1350nowm.jpg.1350x.jpg"
+      },
+      {
+          "id": 8,
+          "title": "Strawberry",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://www.planetpaper.com/wp-content/uploads/2017/06/corrugated_box_company_toronto_usa_shipping_boxes_fruit_boxes.jpg"
+      },
+      {
+          "id": 9,
+          "title": "Watermelons",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://4.imimg.com/data4/IB/VC/ANDROID-56873828/product-500x500.jpeg"
+      },
+      {
+          "id": 10,
+          "title": "Melons",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          "descriptionFull": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
+          "img": "https://static.libertyprim.com/files/varietes/melon-brode-large.jpg?1569317510"
+      }
+  ],
+  "reviews": [
+      {
+          "id": 1,
+          "productId": 1,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 4
+      },
+      {
+          "id": 2,
+          "productId": 1,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 5
+      },
+      {
+          "id": 3,
+          "productId": 3,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 4
+      },
+      {
+          "id": 4,
+          "productId": 4,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 3
+      },
+      {
+          "id": 5,
+          "productId": 4,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 2
+      },
+      {
+          "id": 6,
+          "productId": 9,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 5
+      },
+      {
+          "id": 7,
+          "productId": 7,
+          "userId": 1,
+          "userName": "User Name",
+          "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nihil harum quae eum obcaecati dolores non molestiae laborum mollitia? Nemo necessitatibus atque deleniti repellat aspernatur laboriosam id autem minima aperiam?",
+          "rate": 5
+      }
+  ]
+}

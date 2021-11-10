@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface AuthState {
+interface ProductState {
   products: {
     id: number,
     title: string,
@@ -10,7 +10,7 @@ interface AuthState {
   }[]
 }
 
-const initialState: AuthState = {
+const initialState: ProductState = {
   products: []
 }
 

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface AuthState {
+interface ReviewState {
   reviews: {
     id: number,
     productId: number,
@@ -11,7 +11,7 @@ interface AuthState {
   }[]
 }
 
-const initialState: AuthState = {
+const initialState: ReviewState = {
   reviews: []
 }
 
@@ -19,7 +19,7 @@ export const reviewSlice = createSlice({
   name: 'review',
   initialState,
   reducers: {
-    GET_REVIEWS: (state, action: PayloadAction<AuthState['reviews']>) => {
+    GET_REVIEWS: (state, action: PayloadAction<ReviewState['reviews']>) => {
       state.reviews = action.payload;
     },
     SET_REVIEW: (state, action: PayloadAction<{

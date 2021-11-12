@@ -29,15 +29,15 @@ const wrapper = <Provider store={store} ><Product product={product} ></Product><
 
 describe('Login', () => {
 
-  it('renders', () => {
+  it('should render', () => {
     shallow(wrapper);
   });
 
-  it('takes a snapshot', () => {
+  it('should take a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('checks a child components are available', () => {
+  it('should check a child components are available', () => {
     shallow(wrapper).find(<Comments review={review} />);
   });
 

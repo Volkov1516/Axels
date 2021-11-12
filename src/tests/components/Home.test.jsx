@@ -12,11 +12,11 @@ const wrapper = <Provider store={store} ><Home /></Provider>;
 
 describe('Header', () => {
 
-  it('renders', () => {
+  it('should render', () => {
     shallow(wrapper);
   });
 
-  it('takes a snapshot', () => {
+  it('should take a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });

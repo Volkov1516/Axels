@@ -21,11 +21,11 @@ const wrapper = <Provider store={store} ><Comments review={review} ></Comments><
 
 describe('Login', () => {
 
-  it('renders', () => {
+  it('should render', () => {
     shallow(wrapper);
   });
 
-  it('takes a snapshot', () => {
+  it('should take a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 

@@ -9,26 +9,37 @@ import { store } from '../redux/store';
 
 configure({adapter: new Adapter()});
 
-const wrapper = <Provider store={store}> <App /> </Provider>;
-const product = {
-  id: 0,
-  title: '',
-  description: '',
-  descriptionFull: '',
-  img: ''
+let wrapper: JSX.Element;
+let product: {
+  id: number,
+  title: string,
+  description: string,
+  descriptionFull: string,
+  img: string
 };
 
 describe("App", () => {
 
-  it('renders', () => {
+  beforeEach(() => {
+    wrapper = <Provider store={store}> <App /> </Provider>;
+    product = {
+      id: 0,
+      title: '',
+      description: '',
+      descriptionFull: '',
+      img: ''
+    };
+  })
+
+  it('should render', () => {
     shallow(wrapper);
   });
 
-  it('takes a snapshot', () => {
+  it('should match a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('checks a child components are available', () => {
+  it('should check a child components are available', () => {
     shallow(wrapper).find(<Header />);
     shallow(wrapper).find(<Home />);
     shallow(wrapper).find(<Product product={product}/>);

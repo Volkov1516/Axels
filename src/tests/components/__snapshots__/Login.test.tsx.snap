@@ -1,5 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Login should take a snapshot 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Login />
+</Provider>
+`;
+
 exports[`Login takes a snapshot 1`] = `
 <Provider
   store={

@@ -25,20 +25,16 @@ const review = {
   rate: ''
 };
 
-const wrapper = <Provider store={store} ><Product product={product} ></Product></Provider>;
+let wrapper: any;
 
 describe('Login', () => {
 
-  it('should render', () => {
-    shallow(wrapper);
+  beforeAll(() => {
+    wrapper = shallow(<Provider store={store} ><Product product={product} ></Product></Provider>);
   });
 
   it('should take a snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  });
-
-  it('should check a child components are available', () => {
-    shallow(wrapper).find(<Comments review={review} />);
   });
 
 });

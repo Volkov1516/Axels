@@ -17,12 +17,12 @@ const review = {
   rate: ''
 };
 
-const wrapper = <Provider store={store} ><Comments review={review} ></Comments></Provider>;
+let wrapper: any;
 
 describe('Login', () => {
 
-  it('should render', () => {
-    shallow(wrapper);
+  beforeAll(() => {
+    wrapper = shallow(<Provider store={store} ><Comments review={review} ></Comments></Provider>);
   });
 
   it('should take a snapshot', () => {

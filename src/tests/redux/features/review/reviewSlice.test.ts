@@ -10,15 +10,43 @@ const review = {
   rate: ''
 }
 
+const reviews = [{
+  id: 0,
+  productId: 0,
+  userId: 0,
+  userName: '',
+  text: '',
+  rate: ''
+}]
+
+interface ReviewState {
+  reviews: {
+    id: number,
+    productId: number,
+    userId: number,
+    userName: string,
+    text: string,
+    rate: string
+  }[]
+}
+
+const initialState: ReviewState = {
+  reviews: []
+}
+
 describe('reviewSlice', () => {
 
   it('should return the initial state', () => {
     expect(reducer(undefined, <AnyAction>{})).toEqual({reviews: []});
   });
 
-  test('should handle a review being added to an empty array', () => {
-    expect(reducer({reviews: []}, SET_REVIEW(review))).toEqual({reviews: [review]})
-  })
+  it('should match a GET_REIEWS action', () => {
+    expect(reducer(initialState, GET_REVIEWS(reviews))).toEqual({reviews});
+  });
+
+  test('should match a SET_REIEW action', () => {
+    expect(reducer({reviews: []}, SET_REVIEW(review))).toEqual({reviews: [review]});
+  });
 
 });
 

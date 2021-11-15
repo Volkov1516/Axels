@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -8,9 +7,10 @@ import { Container, Form } from 'react-bootstrap';
 
 import { SET_USER } from '../redux/features/auth/authSlice';
 import { FormWrapper, SubmitButton, FormWarning } from '../styled/Login';
+import { useAppDispatch } from '../redux/hooks';
 
 const Login = () => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const [toggleSign, setToggleSign] = useState(false);
 
@@ -27,7 +27,8 @@ const Login = () => {
       dispatch(SET_USER({
         id: 1,
         email: values.email,
-        password: values.password
+        password: values.password,
+        logged: true
       }))
     },
   });

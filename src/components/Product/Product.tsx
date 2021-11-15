@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -11,25 +10,36 @@ import {
   ProductCard, ProductImg, ProductInfo, ProductDescription, InputSectionLogin,
   InputSectionLoginText, InputSection, ReviewInput, ReviewButton, CommentsSection, 
   ReviewSelect 
-} from '../../styled/Product/Product.js';
+} from '../../styled/Product/Product';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
 
-const Product = ({ product }) => {
+interface IProps {
+  product: {
+    id: number,
+    title: string,
+    description: string,
+    descriptionFull: string,
+    img: string
+  }
+}
+
+const Product = (props: IProps) => {
   const [reviewText, setReviewText] = useState('');
   const [reviewRate, setReviewRate] = useState('');
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
-  const { reviews } = useSelector(state => state.review);
-  const { isAuth } = useSelector(state => state.auth);
+  const { reviews } = useAppSelector(state => state.review);
+  const { isAuth } = useAppSelector(state => state.auth);
 
-  const addReview = (productId, text, rate) => {
+  const addReview = (productId: number, text: string, rate: string) => {
     dispatch(SET_REVIEW({
-      'id': 1,
+      id: 1,
       productId,
-      'userId': isAuth.id,
-      'userName': isAuth.email,
+      userId: isAuth.id,
+      userName: isAuth.email,
       text,
-      'rate': rate
+      rate: rate
     }))
   }
 
@@ -39,32 +49,32 @@ const Product = ({ product }) => {
       <ProductCard>
         <Row>
           <Col lg="5" md="4" sm="6">
-        <ProductImg src={product.img} alt="product img" />
+        <ProductImg src={props.product.img} alt="product img" />
         </Col>
         <Col lg="7" md="12" sm="12" >
         <ProductInfo>
-          <h3>{product.title}</h3>
-          <ProductDescription>{product.descriptionFull}</ProductDescription>
+          <h3>{props.product.title}</h3>
+          <ProductDescription>{props.product.descriptionFull}</ProductDescription>
         </ProductInfo>
         </Col>
         </Row>
       </ProductCard>
-      {isAuth ? (
+      {isAuth.logged ? (
         <Row>
         <InputSection>
           <ReviewInput
             placeholder="Type your review"
             value={reviewText}
-            onChange={(e) => setReviewText(e.target.value)}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => setReviewText(event.target.value)}
           />
-          <ReviewSelect value={reviewRate} onChange={event => setReviewRate(event.target.value)} >
+          <ReviewSelect value={reviewRate} onChange={(event: React.ChangeEvent<HTMLInputElement>) => setReviewRate(event.target.value)} >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </ReviewSelect>
-          <ReviewButton onClick={() => addReview(product.id, reviewText, reviewRate)}>
+          <ReviewButton onClick={() => addReview(props.product.id, reviewText, reviewRate)}>
             Post
           </ReviewButton>
         </InputSection>
@@ -80,7 +90,7 @@ const Product = ({ product }) => {
       )}
       <CommentsSection>
         {reviews && reviews.map(
-          (review, index) => (review.productId === product.id) && <Comments key={index} review={review} />
+          (review, index) => (review.productId === props.product.id) && <Comments key={index} review={review} />
         )}
       </CommentsSection>
     </Container>

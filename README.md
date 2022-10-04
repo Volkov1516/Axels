@@ -1,18 +1,26 @@
-# TASK
+# AXELS
 
 ## Description
-The testing task app.
+My trainee application at the Axels.
 
-## Features 
-- React Hooks
-- Redux Toolkit
-- Redux Saga
-- React Router Dom
-- axios
-- Formik
+## Features
+- Mock data layout
+- Login forms
+- Comments
+
+## Technologies
+- HTML/CSS
+- Styled components
+- TypeScript
+- React (hooks)
+- Redux (toolkit, redux-saga)
 - Bootstrap
+- router-dom
+- formik
+- yup
+- axios
 
 ## Installing
 - Copy the repository
-- Install dependencies by npm install
-- Run the project by npm start
+- Install dependencies `npm install`
+- Run the project `npm start`
